@@ -12,8 +12,11 @@ export const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0 flex items-center">
-            <span className="text-2xl font-bold text-orange-500">Today</span>
-            <span className="text-2xl font-bold text-blue-600">Assist</span>
+            <img
+              src={"https://todayassist.my/wp-content/uploads/2024/12/TODAYASSIST-removebg-1024x1024.png"}
+              alt="TodayAssist Logo"
+              className="h-32 w-32rounded-full mr-3 mt-3"
+            />
           </div>
           {/* Desktop navigation */}
           <nav className="hidden md:flex space-x-8">
