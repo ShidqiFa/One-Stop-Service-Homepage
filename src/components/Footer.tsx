@@ -7,14 +7,14 @@ export const Footer = () => {
       <div className="max-w-7xl mx-8 py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
-            <div className="h-268 w-128 items-center justify-center mr-3">
+            <div className="h-268 w-128 items-center justify-content mr-3">
               <img
               src={todayassistlogo}
               alt="TodayAssist Logo"
-              className="h-32 w-32  items-center rounded-full m"
+              className="h-32 w-32  items-center rounded-full "
               style={{ marginLeft: '3rem' }}
               />
-              <imgsd
+              <img
               src={mdeclogo}
               alt="MDEC Logo"
               className="h-32 w-32  items-center rounded-full m"
@@ -29,7 +29,7 @@ export const Footer = () => {
               <a href="#" className="text-black hover:text-white">
                 <FacebookIcon className="h-6 w-6" />
               </a>
-              <a href="www.instagram.com" className="text-black hover:text-white">
+              <a href="https://www.instagram.com/todayassist_sdn_bhd" className="text-black hover:text-white">
                 <InstagramIcon className="h-6 w-6" />
               </a>
               <a href="#" className="text-black hover:text-white">

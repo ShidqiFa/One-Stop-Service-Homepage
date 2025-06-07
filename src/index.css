@@ -3,3 +3,35 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 /* DO NOT DELETE THESE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL */
+
+/* Custom CSS for the highlight effect */
+
+/* Pastikan transisi ini ada pada elemen yang ingin di-highlight.
+   Tambahkan ke ID atau kelas yang membungkus bagian Contact Us Anda
+   yang memiliki ref di komponen React Anda. */
+#contact-us-section {
+  /* Contoh transisi. Jika Anda sudah memiliki transisi dari Tailwind,
+     pastikan transisi ini tidak berkonflik atau sesuaikan. */
+  transition: background-color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
+}
+
+.highlight {
+  background-color: #ffe082 !important; /* Warna highlight (kuning cerah) */
+  box-shadow: 0 0 20px rgba(255, 224, 130, 0.8), 0 0 40px rgba(255, 224, 130, 0.6); /* Efek pop-up */
+  animation: pulse-highlight 1.5s forwards; /* Animasi berkedip */
+}
+
+@keyframes pulse-highlight {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.01); /* Sedikit membesar */
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
