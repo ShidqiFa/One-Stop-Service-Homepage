@@ -1,38 +1,44 @@
+// src/components/Footer.tsx
 //import React from 'react';
 import { PhoneIcon, MailIcon, MapPinIcon, FacebookIcon, InstagramIcon, TwitterIcon } from 'lucide-react';
 import todayassistlogo from '../assets/images/todayassistlogo.png';
 import mdeclogo from '../assets/images/mdeclogo.png';
+
 export const Footer = () => {
-  return <footer id="contact" className="bg-white text-black">
+  // Kelas CSS untuk efek garis hover pada tautan footer
+  const footerLinkClass = "relative text-base text-black hover:text-orange-500 footer-nav-link";
+
+  return (
+    <footer id="contact" className="bg-white text-black">
       <div className="max-w-7xl mx-8 py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
             <div className="h-268 w-128 items-center justify-content mr-3">
               <img
-              src={todayassistlogo}
-              alt="TodayAssist Logo"
-              className="h-32 w-32  items-center rounded-full "
-              style={{ marginLeft: '3rem' }}
+                src={todayassistlogo}
+                alt="TodayAssist Logo"
+                className="h-32 w-32 items-center rounded-full "
+                style={{ marginLeft: '3rem' }}
               />
               <img
-              src={mdeclogo}
-              alt="MDEC Logo"
-              className="h-32 w-32  items-center rounded-full m"
-              style={{ marginLeft: '3rem' }}
+                src={mdeclogo}
+                alt="MDEC Logo"
+                className="h-32 w-32 items-center rounded-full m"
+                style={{ marginLeft: '3rem' }}
               />
             </div>
             <p className="mt-4 text-base text-black">
               Your one-stop solution for all service needs. Professional,
               reliable, and affordable.
             </p>
-            <div className="mt-4 flex space-x-4"> 
-              <a href="#" className="text-black hover:text-white">
+            <div className="mt-4 flex space-x-4">
+              <a href="#" className="text-black hover:text-orange-500">
                 <FacebookIcon className="h-6 w-6" />
               </a>
-              <a href="https://www.instagram.com/todayassist_sdn_bhd" className="text-black hover:text-white">
+              <a href="https://www.instagram.com/todayassist_sdn_bhd" className="text-black hover:text-orange-500">
                 <InstagramIcon className="h-6 w-6" />
               </a>
-              <a href="#" className="text-black hover:text-white">
+              <a href="#" className="text-black hover:text-orange-500">
                 <TwitterIcon className="h-6 w-6" />
               </a>
             </div>
@@ -43,32 +49,32 @@ export const Footer = () => {
             </h3>
             <ul className="mt-4 space-y-4">
               <li>
-                <a href="#" className="text-base text-black hover:text-white">
+                <a href="#" className={footerLinkClass}>
                   Equipment Rental
                 </a>
               </li>
               <li>
-                <a href="#" className="text-base text-black hover:text-white">
+                <a href="#" className={footerLinkClass}>
                   Nursing Services
                 </a>
               </li>
               <li>
-                <a href="#" className="text-base text-black hover:text-white">
+                <a href="#" className={footerLinkClass}>
                   Security Services
                 </a>
               </li>
               <li>
-                <a href="#" className="text-base text-black hover:text-white">
+                <a href="#" className={footerLinkClass}>
                   Makeup Artists
                 </a>
               </li>
               <li>
-                <a href="#" className="text-base text-black hover:text-white">
+                <a href="#" className={footerLinkClass}>
                   Transport Services
                 </a>
               </li>
               <li>
-                <a href="#" className="text-base text-black hover:text-white">
+                <a href="#" className={footerLinkClass}>
                   Education Services
                 </a>
               </li>
@@ -80,27 +86,27 @@ export const Footer = () => {
             </h3>
             <ul className="mt-4 space-y-4">
               <li>
-                <a href="#" className="text-base text-black hover:text-white">
+                <a href="#" className={footerLinkClass}>
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="text-base text-black hover:text-white">
+                <a href="#" className={footerLinkClass}>
                   Careers
                 </a>
               </li>
               <li>
-                <a href="#" className="text-base text-black hover:text-white">
+                <a href="#" className={footerLinkClass}>
                   Blog
                 </a>
               </li>
               <li>
-                <a href="#" className="text-base text-black hover:text-white">
+                <a href="#" className={footerLinkClass}>
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-base text-black hover:text-white">
+                <a href="#" className={footerLinkClass}>
                   Terms of Service
                 </a>
               </li>
@@ -142,5 +148,6 @@ export const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };

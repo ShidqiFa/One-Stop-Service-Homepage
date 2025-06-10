@@ -1,3 +1,4 @@
+/* src/index.css */
 /* PLEASE NOTE: THESE TAILWIND IMPORTS SHOULD NEVER BE DELETED */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
@@ -9,12 +10,8 @@
 /* Pastikan transisi ini ada pada elemen yang ingin di-highlight.
    Tambahkan ke ID atau kelas yang membungkus bagian Contact Us Anda
    yang memiliki ref di komponen React Anda. */
-#contact-us-section {
-  /* Contoh transisi. Jika Anda sudah memiliki transisi dari Tailwind,
-     pastikan transisi ini tidak berkonflik atau sesuaikan. */
-  transition: background-color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
-}
 
+/* Kelas highlight untuk efek popup/berkedip */
 .highlight {
   background-color: #ffe082 !important; /* Warna highlight (kuning cerah) */
   box-shadow: 0 0 20px rgba(255, 224, 130, 0.8), 0 0 40px rgba(255, 224, 130, 0.6); /* Efek pop-up */
@@ -34,4 +31,37 @@
     transform: scale(1);
     opacity: 1;
   }
+}
+
+/* CSS Kustom untuk efek garis oranye saat hover */
+.header-nav-link,
+.footer-nav-link {
+  position: relative;
+  padding-bottom: 5px; /* Memberi ruang di bawah teks untuk garis */
+  transition: color 0.3s ease-out; /* Transisi untuk warna teks */
+}
+
+.header-nav-link::after,
+.footer-nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #f97316; /* orange-500 */
+  transition: width 0.3s ease-out;
+}
+
+.header-nav-link:hover::after,
+.footer-nav-link:hover::after {
+  width: 100%;
+}
+
+/* Tambahan: Tambahkan transisi pada elemen yang akan di-highlight */
+/* Karena kita menggunakan ref, kita bisa menambahkan transisi langsung ke elemen yang dirujuk
+   atau pastikan div .md:col-span-1 sudah memiliki transisi.
+   Kita bisa tambahkan di CSS jika tidak ada di Tailwind class: */
+.md\:col-span-1 { /* Pastikan ini menargetkan div Contact Us di footer */
+    transition: background-color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
 }
